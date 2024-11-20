@@ -1,2 +1,2 @@
 def h2():
-    print("Hello, World!")
+    return "Hello, World!!"
