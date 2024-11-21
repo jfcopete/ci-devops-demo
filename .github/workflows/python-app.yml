@@ -32,3 +32,13 @@ jobs:
     - name: Test with pytest
       run: |
         make test
+  automerge:
+    name: Automerge
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: automerge
+        uses: "pascalgn/automerge-action@v0.16.4"
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          MERGE_LABELS: "automerge"
